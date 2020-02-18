@@ -1,0 +1,48 @@
+<!--Hello world
+
+<p *ngIf="isTitleExist">{{ title }}</p>-->
+
+<mat-toolbar color="primary" class="header">
+    <img src="../assets/images/sw_logo.png" alt="logo" class="logo" />
+    <ul class="menu">
+        <li class="menu__item">
+            <button mat-button [routerLink]="['/movies']">
+                <mat-icon>local_movies</mat-icon>
+                <span>Movies</span>
+            </button>
+        </li>
+        <li class="menu__item">
+            <button mat-button [routerLink]="['/characters']">
+                <mat-icon>people</mat-icon>
+                <span>Characters</span>
+            </button>
+        </li>
+        <li class="menu__item">
+            <button mat-button [routerLink]="['/droids']">
+                <mat-icon>android</mat-icon>
+                <span>Droids</span>
+            </button>
+        </li>
+        <li class="menu__item">
+            <button mat-button [routerLink]="['/locations']">
+                <mat-icon>location_city</mat-icon>
+                <span>Locations</span>
+            </button>
+        </li>
+    </ul>
+
+    <div class="dropdown-menu">
+        <button mat-icon-button [matMenuTriggerFor]="toggleMenu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #toggleMenu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Login</span>
+            </button>
+        </mat-menu>
+    </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

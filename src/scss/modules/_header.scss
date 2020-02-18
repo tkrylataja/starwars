@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 70%;
+}
+.menu {
+    display: flex;
+
+    &__item {
+        mat-icon {
+            margin-right: 5px;
+        }
+    }
+}
